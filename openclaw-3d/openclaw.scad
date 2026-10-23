@@ -27,47 +27,71 @@
 // Eyes sit in flat-bottomed recesses in the face; pupils sit in shallow pockets
 // in the eyes. For multi-material prints set glue_gap = 0 so parts touch.
 
-part = "all";
+/* [Output] */
+// Part to render
+part = "all"; // [all:Assembled preview, plate:Print plate preview, front:Split - front half, back:Split - back half, eyes_glued:Split - eyes to glue in, pupils_glued:Split - pupils to glue in, front_eyes:Multi-material - eyes for front half, front_pupils:Multi-material - pupils for front half, body:One piece - body, eyes:One piece - eyes, pupils:One piece - pupils]
 
+/* [Quality] */
 $fn = 96;
 
-// ---------- Dimensions ----------
-base_h     = 3;                // stand under the feet
+/* [Body] */
+// Stand height under the feet
+base_h     = 3;
 base_rx    = 26;
 base_ry    = 20;
-
-leg_h      = 11;               // visible leg height between base and body
-body_rx    = 32;               // half width
-body_ry    = 27;               // half depth
-body_rz    = 31;               // half height
-body_z     = base_h + leg_h + body_rz - 3;  // body center (legs tuck into the body a bit)
-
-eye_r      = 4.6;
-eye_dx     = 11.5;             // half distance between eyes
-eye_z      = body_z + 15;
-pupil_r    = 2.0;
-eye_sink   = 1.2;              // eye recess depth below the face surface
-eye_dome   = 1.4;              // how far the eye dome rises above the face
-pupil_depth = 0.8;             // pupil pocket depth in the eye
-pupil_dome = 0.6;              // how far the pupil rises above the eye
-glue_gap   = 0.15;             // radial gap around glued eyes and pupils
-
-claw_dx    = 35;               // claw center distance from the axis
-claw_z     = body_z + 1;
-
+// Visible leg height between base and body
+leg_h      = 11;
+// Body half width
+body_rx    = 32;
+// Body half depth
+body_ry    = 27;
+// Body half height
+body_rz    = 31;
+// Claw center distance from the axis
+claw_dx    = 35;
 leg_w      = 9;
 leg_d      = 9;
-leg_dx     = 9;                // half distance between legs
+// Half distance between legs
+leg_dx     = 9;
 
-ant_r      = 1.8;              // antenna thickness (radius)
-ant_dx     = 11;               // antenna root distance from the axis
-ant_flat   = 0.4;              // flat shaved off the back of the antennae by the cut
+/* [Eyes] */
+eye_r      = 4.6;
+// Half distance between eyes
+eye_dx     = 11.5;
+pupil_r    = 2.0;
+// Eye recess depth below the face surface
+eye_sink   = 1.2;
+// How far the eye dome rises above the face
+eye_dome   = 1.4;
+// Pupil pocket depth in the eye
+pupil_depth = 0.8;
+// How far the pupil rises above the eye
+pupil_dome = 0.6;
+// Radial gap around glued eyes and pupils (0 for multi-material prints)
+glue_gap   = 0.15;
+
+/* [Antennae] */
+// Antenna thickness (radius)
+ant_r      = 1.8;
+// Antenna root distance from the axis
+ant_dx     = 11;
+// Flat shaved off the back of the antennae by the cut
+ant_flat   = 0.4;
+
+/* [Dowels] */
+// Dowel hole diameter (1.75 mm filament)
+pin_d      = 2.0;
+// Dowel hole depth per half
+pin_depth  = 7;
+// 45 deg lead-in at the hole mouth (first layer squish)
+pin_chamfer = 0.6;
+
+/* [Hidden] */
+body_z     = base_h + leg_h + body_rz - 3;  // body center (legs tuck into the body a bit)
+eye_z      = body_z + 15;
+claw_z     = body_z + 1;
 ant_y      = -(ant_r - ant_flat);  // antennae sit just in front of the cut plane, so they
                                // print lying flat on the bed as part of the front half
-
-pin_d      = 2.0;              // dowel holes (1.75 mm filament)
-pin_depth  = 7;                // per half
-pin_chamfer = 0.6;             // 45 deg lead-in at the hole mouth (first layer squish)
 pins       = [[16, 0], [-16, 0], [0, 16], [0, -16]];  // [x, z - body_z] on the cut plane
 
 // ---------- Colors (preview only) ----------
