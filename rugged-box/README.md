@@ -50,6 +50,9 @@ The `part` parameter selects what is rendered:
 - `box`, `lid`, `latch`, `seal` render a single part in its print orientation
 - `print_plate` lays out all parts next to each other
 
+`show_latches` and `show_seal` hide the latches or the seal in both the
+`assembly` and `print_plate` views.
+
 ### Exporting STLs
 
 Export each part separately, for example:

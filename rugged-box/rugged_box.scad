@@ -12,6 +12,7 @@
 part = "print_plate"; // [assembly, box, lid, latch, seal, print_plate]
 // Lid opening angle in the assembly view (0 = closed)
 lid_open_angle = 0; // [0:5:180]
+// Include the latches / seal in the assembly and print_plate views
 show_latches = true;
 show_seal = false;
 
@@ -337,8 +338,9 @@ module print_plate() {
     dx = 2 * (hx + o_out) + gap;
     box();
     translate([dx, 0, 0]) lid();
-    for (i = [0, 1]) translate([-hx - o_out - 25 - i * 25, -10, 0]) latch();
-    translate([0, 2 * (hy + o_out) + gap, 0]) seal();
+    if (show_latches)
+        for (i = [0, 1]) translate([-hx - o_out - 25 - i * 25, -10, 0]) latch();
+    if (show_seal) translate([0, 2 * (hy + o_out) + gap, 0]) seal();
 }
 
 if (part == "assembly") assembly();
