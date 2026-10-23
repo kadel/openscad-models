@@ -110,6 +110,7 @@ LatchSlitAngle = 9.1;
 /* [Quality] */
 $fn = 64;
 
+/* [Hidden] */
 // ---------------------------------------------------------------- derived
 eps = 0.01;
 c = InnerChamferSize;
