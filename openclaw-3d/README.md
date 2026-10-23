@@ -100,6 +100,16 @@ After changes, regenerate all STL folders with:
 
 Requires [OpenSCAD](https://openscad.org/) on `PATH`.
 
+## License
+
+This model (the OpenSCAD source, STL and 3MF files, and photos) is licensed
+under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/), see
+[LICENSE](LICENSE). You may share and adapt it, including commercially, as long
+as you give appropriate credit.
+
+The OpenClaw name, mascot and logo (`icon.png`) belong to the OpenClaw project
+and are not covered by this license.
+
 ## Publishing (Printables / MakerWorld)
 
 Ready-to-paste text for model pages.

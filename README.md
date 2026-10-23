@@ -14,6 +14,10 @@ Each model lives in its own directory with its own README.
 
 ## Licenses
 
-Licenses differ between models. See the LICENSE file or license section in
-each model's directory. The rugged box is licensed under
-[CC BY-NC-SA 4.0](rugged-box/LICENSE), the same license as the original work.
+Licenses differ between models. See the LICENSE file and license section in
+each model's directory.
+
+| Model | License |
+|---|---|
+| [rugged-box](rugged-box/) | [CC BY-NC-SA 4.0](rugged-box/LICENSE), the same license as the original work |
+| [openclaw-3d](openclaw-3d/) | [CC BY 4.0](openclaw-3d/LICENSE) (the OpenClaw name and logo are not covered) |
