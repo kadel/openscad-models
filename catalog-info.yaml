@@ -12,8 +12,6 @@ metadata:
       title: GitHub Repository
     - url: https://openscad.org
       title: OpenSCAD
-    - url: https://www.printables.com/model/258431-rugged-box-parametric
-      title: Original Rugged Box (Parametric) by Whity
   tags:
     - openscad
     - 3d-printing
